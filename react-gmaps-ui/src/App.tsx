@@ -1,23 +1,21 @@
 import "./App.css";
+import MapComponent from "./components/MapComponent";
 
 function App() {
   return (
-    <>
-      <div className="flex justify-center items-center min-h-screen bg-gray-50">
-        <div className="max-w-xl w-full p-6 bg-white rounded-lg shadow-md text-center">
-          <h1 className="text-3xl font-bold mb-4 text-blue-700">
-            Google Maps 🗺️ React UI Demo
-          </h1>
-          <p className="text-gray-700">
-            Basic setup for integrating Google Maps with a React application.
-            <br />
-            <span className="text-sm text-gray-500">
-              Initial commit - Day 1.
-            </span>
-          </p>
+    <div className="min-h-screen bg-gray-100">
+      <header className="bg-white shadow-lg border-b">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-blue-900">
+              🗺️ React Google Maps App
+            </h1>
+          </div>
         </div>
-      </div>
-    </>
+      </header>
+
+      <MapComponent />
+    </div>
   );
 }
 
