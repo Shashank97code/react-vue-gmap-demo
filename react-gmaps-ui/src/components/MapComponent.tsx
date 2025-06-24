@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 const MapComponent = () => {
   const mapElement = useRef<HTMLDivElement | null>(null);
   const [mapError, setMapError] = useState<string | null>(null);
-  const REACT_APP_GOOGLE_MAPS_API_KEY = "YOUR_SECRET_GOOGLE_MAPS_API_KEY"; // Replace with your actual API key
+  const REACT_APP_GOOGLE_MAPS_API_KEY = ""; // Replace with your actual API key
   // Note: In a real application, you should use environment variables to store sensitive information like API keys.
 
   useEffect(() => {
@@ -18,8 +18,6 @@ const MapComponent = () => {
         const apiKey = REACT_APP_GOOGLE_MAPS_API_KEY;
 
         if (!apiKey) {
-          alert("Google Maps API key not found: ");
-
           setMapError("Google Maps API key not found. ");
         }
         // Dynamic import of Google Maps JS API Loader
@@ -56,7 +54,6 @@ const MapComponent = () => {
       } catch (error) {
         console.error("Error loading Google Maps:", error);
         if (error instanceof Error) {
-          alert("Error loading Google Maps: " + error.message);
           setMapError(error.message);
         } else {
           setMapError("An unknown error occurred while loading Google Maps.");
