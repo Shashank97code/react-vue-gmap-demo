@@ -52,3 +52,6 @@ export default tseslint.config({
   },
 })
 ```
+
+
+![integrated-map-with-default-marker-bangalore](https://github.com/user-attachments/assets/2273ed23-dc91-43df-b11b-4d4f9ab75e3f)
