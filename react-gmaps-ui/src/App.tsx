@@ -14,7 +14,14 @@ function App() {
         </div>
       </header>
 
-      <MapComponent />
+      <main className="container mx-auto px-1 py-4">
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-gray-700 mb-3">
+            Live Google Maps Integration
+          </h3>
+          <MapComponent />
+        </div>
+      </main>
     </div>
   );
 }
