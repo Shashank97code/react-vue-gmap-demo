@@ -43,13 +43,16 @@ const MapComponent = () => {
           streetViewControl: true,
           fullscreenControl: true,
         });
-        // Add a marker for 91Springboard , Bengaluru
-        new google.maps.Marker({
+        // Add a marker for location 91Springboard, Bengaluru
+        const marker = new google.maps.Marker({
           position: { lat: 12.988908, lng: 77.6867223 },
           map: map,
           title: "91Springboard ORR Mahadevapura, Bengaluru, Karnataka",
           animation: google.maps.Animation.DROP,
         });
+
+        // Pan the map to the marker position
+        map.panTo({ lat: 12.988908, lng: 77.6867223 });
       } catch (error) {
         console.error("Error loading Google Maps:", error);
         if (error instanceof Error) {
