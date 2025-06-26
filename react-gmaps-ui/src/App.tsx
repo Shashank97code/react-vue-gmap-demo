@@ -19,6 +19,9 @@ function App() {
           <h3 className="text-lg font-semibold text-gray-700 mb-3">
             Live Google Maps Integration
           </h3>
+          <p className="text-gray-600 ">
+            Basic marker & vehicle based on position with info window on hover{" "}
+          </p>
           <MapComponent />
         </div>
       </main>
